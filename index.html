@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,80 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>What Type of Money Parent Are You?</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #f5f7fa; margin: 0; padding: 0; }
-    .container { max-width: 600px; margin: auto; background: #fff; padding: 30px; box-shadow: 0 0 15px rgba(0,0,0,0.1); margin-top: 50px; border-radius: 10px; }
-    h1 { color: #2e6f94; text-align: center; }
-    .question { margin: 25px 0; }
-    .question p { font-weight: bold; }
+    body { font-family: Georgia, serif; background-color: #f9fafc; margin: 0; padding: 0; }
+    .container { max-width: 650px; margin: auto; background: #fff; padding: 40px 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-top: 60px; border-radius: 12px; }
+    h1 { color: #2c3e50; text-align: center; font-size: 28px; line-height: 1.4; }
+    .question { margin: 35px 0; }
+    .question p { font-size: 18px; font-weight: bold; color: #34495e; }
     .answers button {
-      background-color: #e8f0fe;
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin: 8px 0;
+      background-color: #f0f4f8;
+      border: 2px solid #dce1e6;
+      padding: 14px;
+      margin: 10px 0;
       width: 100%;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 16px;
+      text-align: left;
     }
     .answers button:hover {
-      background-color: #d2e3fc;
+      background-color: #e2ebf3;
     }
     .result {
       display: none;
       text-align: center;
-      padding: 20px;
-      background-color: #d1f5d3;
-      border-radius: 8px;
-      margin-top: 20px;
+      padding: 25px;
+      background-color: #e7f5e9;
+      border-radius: 10px;
+      margin-top: 30px;
     }
+    .result h2 { color: #2e7d32; }
     .cta-btn {
       display: inline-block;
-      background-color: #34a853;
+      background-color: #2e7d32;
       color: #fff;
-      padding: 12px 24px;
+      padding: 14px 26px;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       text-decoration: none;
-      margin-top: 20px;
+      margin-top: 25px;
+      font-size: 16px;
     }
-    .footer { font-size: 12px; text-align: center; margin-top: 40px; color: #888; }
+    .footer { font-size: 13px; text-align: center; margin-top: 50px; color: #888; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>What Type of Money Parent Are You?</h1>
+    <h1>Are You Teaching Your Kids the Right Money Habits?</h1>
     <div id="quiz">
       <div class="question" id="q1">
-        <p>1. How often do you give your kids money?</p>
+        <p>1. How do you usually give your child money?</p>
         <div class="answers">
-          <button onclick="nextQuestion()">Weekly allowance</button>
-          <button onclick="nextQuestion()">Only when they ask</button>
-          <button onclick="nextQuestion()">Rarely – they should earn it!</button>
+          <button onclick="nextQuestion()">Through weekly allowance – it teaches routine</button>
+          <button onclick="nextQuestion()">Only when they need something</button>
+          <button onclick="nextQuestion()">They need to earn it with chores or responsibility</button>
         </div>
       </div>
 
       <div class="question" id="q2" style="display:none;">
-        <p>2. Do you track your child’s spending?</p>
+        <p>2. Do you know exactly what your child spends money on?</p>
         <div class="answers">
-          <button onclick="nextQuestion()">Yes, every purchase</button>
-          <button onclick="nextQuestion()">Sometimes</button>
-          <button onclick="nextQuestion()">No, they’re on their own</button>
+          <button onclick="nextQuestion()">Yes – I track all their spending</button>
+          <button onclick="nextQuestion()">Somewhat – but I wish I had more control</button>
+          <button onclick="nextQuestion()">Not really – they manage it themselves</button>
         </div>
       </div>
 
       <div class="question" id="q3" style="display:none;">
-        <p>3. Would you like them to learn saving and investing early?</p>
+        <p>3. Would you like your child to learn savings, investing, and smart spending from an early age?</p>
         <div class="answers">
-          <button onclick="showResult()">Absolutely</button>
-          <button onclick="showResult()">Maybe, if it’s easy</button>
-          <button onclick="showResult()">Not a priority right now</button>
+          <button onclick="showResult()">Definitely – the earlier, the better</button>
+          <button onclick="showResult()">If it’s simple enough for them</button>
+          <button onclick="showResult()">Not right now – maybe later</button>
         </div>
       </div>
     </div>
 
     <div id="result" class="result">
-      <h2>You're a Smart-Planning Parent!</h2>
-      <p>You care about your child’s future and want them to build real-world money skills. That's exactly what <strong>Greenlight Debit Card for Kids</strong> is designed for.</p>
-      <a class="cta-btn" href="https://greenlight.com/your-affiliate-link" target="_blank">Get Started with Greenlight</a>
+      <h2>You’re a Proactive Parent!</h2>
+      <p>You’re thinking ahead and want to raise financially confident kids. That’s exactly what <strong>Greenlight Debit Card for Kids</strong> helps parents do – with full control, spending alerts, and financial education tools built in.</p>
+      <a class="cta-btn" href="https://greenlight.com/your-affiliate-link" target="_blank">Explore the Greenlight Card</a>
     </div>
 
     <div class="footer">
