@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>What Type of Money Parent Are You?</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f5f7fa; margin: 0; padding: 0; }
+    .container { max-width: 600px; margin: auto; background: #fff; padding: 30px; box-shadow: 0 0 15px rgba(0,0,0,0.1); margin-top: 50px; border-radius: 10px; }
+    h1 { color: #2e6f94; text-align: center; }
+    .question { margin: 25px 0; }
+    .question p { font-weight: bold; }
+    .answers button {
+      background-color: #e8f0fe;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 8px 0;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .answers button:hover {
+      background-color: #d2e3fc;
+    }
+    .result {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      background-color: #d1f5d3;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background-color: #34a853;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    .footer { font-size: 12px; text-align: center; margin-top: 40px; color: #888; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>What Type of Money Parent Are You?</h1>
+    <div id="quiz">
+      <div class="question" id="q1">
+        <p>1. How often do you give your kids money?</p>
+        <div class="answers">
+          <button onclick="nextQuestion()">Weekly allowance</button>
+          <button onclick="nextQuestion()">Only when they ask</button>
+          <button onclick="nextQuestion()">Rarely – they should earn it!</button>
+        </div>
+      </div>
+
+      <div class="question" id="q2" style="display:none;">
+        <p>2. Do you track your child’s spending?</p>
+        <div class="answers">
+          <button onclick="nextQuestion()">Yes, every purchase</button>
+          <button onclick="nextQuestion()">Sometimes</button>
+          <button onclick="nextQuestion()">No, they’re on their own</button>
+        </div>
+      </div>
+
+      <div class="question" id="q3" style="display:none;">
+        <p>3. Would you like them to learn saving and investing early?</p>
+        <div class="answers">
+          <button onclick="showResult()">Absolutely</button>
+          <button onclick="showResult()">Maybe, if it’s easy</button>
+          <button onclick="showResult()">Not a priority right now</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="result" class="result">
+      <h2>You're a Smart-Planning Parent!</h2>
+      <p>You care about your child’s future and want them to build real-world money skills. That's exactly what <strong>Greenlight Debit Card for Kids</strong> is designed for.</p>
+      <a class="cta-btn" href="https://greenlight.com/your-affiliate-link" target="_blank">Get Started with Greenlight</a>
+    </div>
+
+    <div class="footer">
+      This is a sponsored educational quiz. We may earn a commission if you sign up through our partner link.
+    </div>
+  </div>
+
+  <script>
+    let currentQuestion = 1;
+    function nextQuestion() {
+      document.getElementById('q' + currentQuestion).style.display = 'none';
+      currentQuestion++;
+      document.getElementById('q' + currentQuestion).style.display = 'block';
+    }
+    function showResult() {
+      document.getElementById('q3').style.display = 'none';
+      document.getElementById('result').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
